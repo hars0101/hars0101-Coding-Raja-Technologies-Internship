@@ -93,7 +93,6 @@ function generateResume() {
         `;
     }
 
-    // CSS styles for the resume
     const resumeCSS = `
         <style>
             body {
@@ -142,14 +141,21 @@ function generateResume() {
                     opacity: 1;
                 }
             }
+            .contact-info {
+                text-align: center;
+                margin-bottom: 20px;
+            }
         </style>
     `;
 
-    // Concatenate the resumeHTML with the CSS styles
     const resumeHTML = `
         ${resumeCSS}
         <div class="container">
             <h1>${name}</h1>
+            <div class="contact-info">
+                <p>${phone} | ${email}</p>
+            </div>
+            <p>${address}</p>
             <div class="section">
                 <h3>Work Experience</h3>
                 ${experience}
